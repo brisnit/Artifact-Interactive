@@ -208,8 +208,11 @@ export const solutions: Solution[] = [
     imagery: [
       {
         label: "Classroom photography",
-        caption: "Reserved for secondary classroom environments.",
-        ratio: "4/3",
+        caption: "",
+        // Native 3:2, matching the campus plate on Higher Education.
+        ratio: "3/2",
+        src: "/imagery/secondary-classroom.jpg",
+        alt: "A secondary classroom between sessions: desks and chairs in cool afternoon light, a jacket over a chair back, and a teacher at the windows with their back to camera.",
       },
       {
         label: "Counseling context",
