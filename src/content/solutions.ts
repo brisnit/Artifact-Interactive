@@ -328,8 +328,12 @@ export const solutions: Solution[] = [
       },
       {
         label: "Team context",
-        caption: "Reserved for collaborative and applied work settings.",
-        ratio: "4/3",
+        caption: "",
+        ratio: "16/9",
+        src: "/imagery/dealership-showroom.jpg",
+        width: 1672,
+        height: 941,
+        alt: "A dealership showroom floor: a salesperson and a customer looking together at a tablet beside a vehicle, with colleagues working in the background.",
       },
     ],
     meta: [

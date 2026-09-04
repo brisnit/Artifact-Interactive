@@ -3,6 +3,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { FeatureCard, Surface } from "@/components/ui/Card";
 import { QuoteBlock, SignalChain } from "@/components/ui/Editorial";
+import { Figure } from "@/components/ui/Figure";
 import { ImagePlaceholder } from "@/components/ui/Placeholder";
 import { PageHero } from "@/components/layout/PageHero";
 import { CtaBand } from "@/components/layout/CtaBand";
@@ -185,14 +186,15 @@ export default function AboutPage() {
             ))}
           </div>
 
-          <Reveal className="mt-16" delay={200}>
-            <ImagePlaceholder
-              caption="Reserved for team, studio, and working-session photography."
-              label="Studio photography"
-              ratio="21/9"
-              tone="dark"
-            />
-          </Reveal>
+          <Figure
+            alt="A studio working session: five people standing around a large table covered with printed diagrams and sticky notes, daylight from a window wall, a pinboard of sheets behind them."
+            className="mt-16"
+            height={992}
+            sizes="(min-width: 1024px) 90vw, 100vw"
+            src="/imagery/studio-session.jpg"
+            tone="dark"
+            width={1586}
+          />
         </div>
       </Section>
 

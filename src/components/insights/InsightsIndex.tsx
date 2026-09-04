@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import { Figure } from "@/components/ui/Figure";
 import { ImagePlaceholder } from "@/components/ui/Placeholder";
 import { FadeUp, ImageReveal, RevealText, StaggerGroup } from "@/components/motion";
 import { cn } from "@/lib/cn";
@@ -141,13 +142,23 @@ export function InsightsIndex() {
           {spotlight.map((article) => (
             <article className="group" key={article.slug}>
               <Link className="flex h-full flex-col" href={`/insights/${article.slug}`}>
-                <ImageReveal className="rounded-lg">
-                  <ImagePlaceholder
-                    className="[&_figure]:m-0"
-                    label={`${article.category} — figure`}
-                    ratio="16/10"
+                {article.figure ? (
+                  <Figure
+                    alt={article.figure.alt}
+                    height={article.figure.height}
+                    sizes="(min-width: 768px) 46vw, 100vw"
+                    src={article.figure.src}
+                    width={article.figure.width}
                   />
-                </ImageReveal>
+                ) : (
+                  <ImageReveal className="rounded-lg">
+                    <ImagePlaceholder
+                      className="[&_figure]:m-0"
+                      label={`${article.category} — figure`}
+                      ratio="16/10"
+                    />
+                  </ImageReveal>
+                )}
                 <div className="mt-7 flex flex-1 flex-col">
                   <Meta article={article} />
                   <h3 className="mt-5 text-[1.5rem] font-bold leading-[1.14] tracking-[-0.03em] text-ink-900 transition-colors duration-400 group-hover:text-signal-600 lg:text-[1.875rem]">

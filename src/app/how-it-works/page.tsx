@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { QuoteBlock } from "@/components/ui/Editorial";
-import { ImagePlaceholder } from "@/components/ui/Placeholder";
+import { Figure } from "@/components/ui/Figure";
 import { PageHero } from "@/components/layout/PageHero";
 import { CtaBand } from "@/components/layout/CtaBand";
 import { LearningLoop } from "@/components/viz/LearningLoop";
@@ -220,20 +220,18 @@ export default function HowItWorksPage() {
             </div>
 
             <div className="flex flex-col gap-8">
-              <Reveal delay={140}>
-                <ImagePlaceholder
-                  caption="Reserved for classroom and seminar photography — the environments the signals come from."
-                  label="Classroom photography"
-                  ratio="4/3"
-                />
-              </Reveal>
-              <Reveal delay={220}>
-                <ImagePlaceholder
-                  caption="Reserved for a workshop diagram from an institutional design engagement."
-                  label="Design workshop"
-                  ratio="16/9"
-                />
-              </Reveal>
+              <Figure
+                alt="A seminar room mid-discussion: adults seated around a large table, one speaking, daylight from a window wall with a campus building beyond."
+                height={992}
+                src="/imagery/seminar-discussion.jpg"
+                width={1585}
+              />
+              <Figure
+                alt="A workshop wall at the end of a design session: a large hand-drawn diagram of connected boxes and a numbered sequence, flanked by columns of sticky notes."
+                height={992}
+                src="/imagery/workshop-artefact.jpg"
+                width={1586}
+              />
             </div>
           </div>
         </div>

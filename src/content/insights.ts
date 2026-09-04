@@ -16,6 +16,8 @@ export type Article = {
   date: string;
   readingTime: number;
   featured?: boolean;
+  /** Optional article figure; the slot falls back to a reserved plate. */
+  figure?: { src: string; alt: string; width: number; height: number };
   /** Body is authored as a light block model so article pages stay typed. */
   body: Block[];
 };
@@ -113,6 +115,12 @@ export const articles: Article[] = [
     date: "2025-10-30",
     readingTime: 7,
     featured: true,
+    figure: {
+      src: "/imagery/figure-signal-network.png",
+      alt: "A field of scattered grey points on the left drawing together through fine connecting lines into three dense clusters on the right, one picked out in blue.",
+      width: 1584,
+      height: 993,
+    },
     body: [
       {
         type: "p",
@@ -159,6 +167,12 @@ export const articles: Article[] = [
     date: "2025-10-14",
     readingTime: 6,
     featured: true,
+    figure: {
+      src: "/imagery/figure-pathways.png",
+      alt: "A single point on the left opening into three curved trajectories fanning to the right, the middle one heavier and blue.",
+      width: 1584,
+      height: 993,
+    },
     body: [
       {
         type: "p",
