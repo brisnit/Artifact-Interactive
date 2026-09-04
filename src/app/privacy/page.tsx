@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/layout/LegalPage";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy",
@@ -16,7 +17,7 @@ export default function PrivacyPage() {
           heading: "Who we are",
           paragraphs: [
             "Artifact Interactive researches, designs, and builds Learning Intelligence Platforms for universities, schools, and organizations. In this notice, “we”, “us”, and “Artifact” mean Artifact Interactive.",
-            "For any question about this notice, or to exercise a right described below, write to privacy@artifactinteractive.com.",
+            `For any question about this notice, or to exercise a right described below, write to ${site.email}.`,
           ],
         },
         {
@@ -72,7 +73,7 @@ export default function PrivacyPage() {
           paragraphs: [
             "You may ask what personal information we hold about you, ask for it to be corrected, ask for it to be deleted, ask us to restrict how we use it, object to our use of it, or ask for a copy in a portable format. Where you are in the UK or EU, you may also complain to your supervisory authority — in the UK, the Information Commissioner's Office.",
             "Residents of California, Colorado, Connecticut, Virginia, and other US states with comparable laws have equivalent rights to know, correct, delete, and opt out. Because we do not sell personal information or use it for targeted advertising, there is nothing to opt out of, but the right to know and to delete applies in full.",
-            "Write to privacy@artifactinteractive.com and we will respond within the period the applicable law allows, and sooner where we can. We will not treat you differently for exercising a right.",
+            `Write to ${site.email} and we will respond within the period the applicable law allows, and sooner where we can. We will not treat you differently for exercising a right.`,
           ],
         },
         {
@@ -107,7 +108,7 @@ export default function PrivacyPage() {
         {
           heading: "Contact",
           paragraphs: [
-            "Privacy questions and rights requests: privacy@artifactinteractive.com. Anything else: hello@artifactinteractive.com.",
+            `Privacy questions and rights requests, and anything else: ${site.email}.`,
           ],
         },
       ]}

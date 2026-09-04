@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
+import { site } from "@/lib/site";
 
 const INSTITUTION_TYPES = [
   "University",
@@ -15,8 +16,15 @@ const INSTITUTION_TYPES = [
 type Status = "idle" | "submitting" | "sent";
 
 /**
- * Contact form. No backend is wired yet, so submission is handled locally and
- * the state is stated plainly rather than pretending a message was delivered.
+ * Contact form.
+ *
+ * There is no server behind this yet, so rather than pretending a message was
+ * delivered, submission composes the enquiry and hands it to the visitor's
+ * mail client addressed to `site.email`. That means the form genuinely works
+ * today with no service, key, or deployment dependency.
+ *
+ * When a backend is added, replace the body of `onSubmit` with a POST to the
+ * route handler — the field names below are already the payload.
  */
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -24,7 +32,26 @@ export function ContactForm() {
   const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setStatus("submitting");
-    window.setTimeout(() => setStatus("sent"), 600);
+
+    const data = new FormData(event.currentTarget);
+    const value = (key: string) => String(data.get(key) ?? "").trim();
+
+    const subject = `Artifact enquiry — ${value("organization") || value("name") || "website"}`;
+    const body = [
+      `Name: ${value("name")}`,
+      `Organization: ${value("organization")}`,
+      `Role: ${value("role") || "—"}`,
+      `Email: ${value("email")}`,
+      `Institution type: ${value("institutionType")}`,
+      "",
+      value("message") || "(no message)",
+    ].join("\n");
+
+    window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(
+      subject,
+    )}&body=${encodeURIComponent(body)}`;
+
+    window.setTimeout(() => setStatus("sent"), 700);
   };
 
   if (status === "sent") {
@@ -48,18 +75,18 @@ export function ContactForm() {
           </svg>
         </span>
         <h2 className="mt-6 text-[1.375rem] font-bold tracking-tight text-ink-900">
-          Thank you — your message is ready to send.
+          Your message is ready to send.
         </h2>
         <p className="mt-4 text-[0.9375rem] leading-relaxed text-slate-ai-700">
-          This site is not yet connected to a mail service, so nothing has been
-          transmitted. Until it is, please write to{" "}
+          We&apos;ve opened your email client with the enquiry filled in — press
+          send and it will reach us. If nothing opened, write to{" "}
           <a
             className="font-semibold text-signal-600 underline underline-offset-4"
-            href="mailto:hello@artifactinteractive.com"
+            href={`mailto:${site.email}`}
           >
-            hello@artifactinteractive.com
+            {site.email}
           </a>{" "}
-          and we will pick the conversation up from there.
+          directly and we will pick the conversation up from there.
         </p>
         <button
           className="mt-7 text-[0.875rem] font-semibold text-signal-600 transition-colors duration-300 hover:text-ink-900"

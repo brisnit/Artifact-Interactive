@@ -33,7 +33,7 @@ export default function ContactPage() {
     <>
       <PageHero
         deck="Tell us what you are trying to understand. The first conversation is usually less about the platform than about which questions are worth answering."
-        title="Let\u2019s explore what your institution could learn."
+        title="Let’s explore what your institution could learn."
       />
 
       <Section tone="light">

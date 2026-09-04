@@ -4,7 +4,9 @@ export const site = {
   url: "https://artifactinteractive.com",
   description:
     "Artifact Interactive creates Learning Intelligence Platforms that turn everyday learning activity into intelligence institutions can use.",
-  email: "hello@artifactinteractive.com",
+  /** Every address on the site resolves here — footer, contact panel,
+   *  contact form delivery, and the privacy and terms notices. */
+  email: "andrew@artifactintelligence.co",
   cta: {
     primary: { label: "Explore Learning Intelligence", href: "/platform" },
     secondary: { label: "Talk With Artifact", href: "/contact" },

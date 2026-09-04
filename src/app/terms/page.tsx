@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/layout/LegalPage";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Terms",
@@ -98,7 +99,7 @@ export default function TermsPage() {
         {
           heading: "Contact",
           paragraphs: [
-            "Questions about these terms: legal@artifactinteractive.com. Anything else: hello@artifactinteractive.com.",
+            `Questions about these terms, and anything else: ${site.email}.`,
           ],
         },
       ]}
