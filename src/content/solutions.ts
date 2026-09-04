@@ -10,7 +10,17 @@ export type Solution = {
   focus: { index: string; title: string; body: string }[];
   signals: string[];
   caution: string;
-  imagery: { label: string; caption: string; ratio: string }[];
+  /**
+   * Reserved imagery slots. A slot renders as a labelled placeholder plate
+   * until `src` is supplied, at which point it renders the real photograph.
+   */
+  imagery: {
+    label: string;
+    caption: string;
+    ratio: string;
+    src?: string;
+    alt?: string;
+  }[];
   meta: { label: string; value: string }[];
 };
 
@@ -98,8 +108,11 @@ export const solutions: Solution[] = [
     imagery: [
       {
         label: "Campus photography",
-        caption: "Reserved for institutional context — campus, quad, and academic buildings.",
-        ratio: "4/3",
+        caption: "",
+        // Native 3:2 — cropping to 4:3 would lose the tree and the reflection.
+        ratio: "3/2",
+        src: "/imagery/campus-quad.jpg",
+        alt: "A university quadrangle at blue hour: a concrete and glass academic building with lit windows, a bare tree, and two figures crossing wet paving.",
       },
       {
         label: "Lecture hall",

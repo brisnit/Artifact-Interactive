@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import { ImageReveal } from "@/components/motion";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { FeatureCard, Surface } from "@/components/ui/Card";
@@ -13,6 +15,66 @@ import { solutions, type Solution } from "@/content/solutions";
  * deliberately identical across environments so the differences in content
  * read as differences in the environment, not in the design.
  */
+/**
+ * One imagery slot: the real photograph once `src` is set, the reserved plate
+ * until then. Keeps the three solution pages on one template while they fill
+ * up with photography at different times.
+ */
+function SolutionImage({
+  image,
+  tone = "light",
+  ratio,
+}: {
+  image: Solution["imagery"][number];
+  tone?: "light" | "dark";
+  ratio?: string;
+}) {
+  if (!image.src) {
+    return (
+      <Reveal className="mt-12" delay={280}>
+        <ImagePlaceholder
+          caption={image.caption}
+          label={image.label}
+          ratio={ratio ?? image.ratio}
+          tone={tone}
+        />
+      </Reveal>
+    );
+  }
+
+  return (
+    <figure className="mt-12">
+      <ImageReveal
+        className={
+          tone === "dark"
+            ? "rounded-lg border border-white/12"
+            : "rounded-lg border border-ink-900/10"
+        }
+      >
+        <Image
+          alt={image.alt ?? ""}
+          className="w-full"
+          height={1024}
+          sizes="(min-width: 1024px) 45vw, 100vw"
+          src={image.src}
+          width={1536}
+        />
+      </ImageReveal>
+      {image.caption && (
+        <figcaption
+          className={
+            tone === "dark"
+              ? "mt-3.5 text-[0.8125rem] leading-relaxed text-slate-ai-400"
+              : "mt-3.5 text-[0.8125rem] leading-relaxed text-slate-ai-500"
+          }
+        >
+          {image.caption}
+        </figcaption>
+      )}
+    </figure>
+  );
+}
+
 export function SolutionPage({ solution }: { solution: Solution }) {
   const others = solutions.filter((s) => s.slug !== solution.slug);
 
@@ -114,14 +176,7 @@ export function SolutionPage({ solution }: { solution: Solution }) {
                 title="Where the intelligence layer starts."
                 tone="light-text"
               />
-              <Reveal className="mt-12" delay={280}>
-                <ImagePlaceholder
-                  caption={solution.imagery[0].caption}
-                  label={solution.imagery[0].label}
-                  ratio={solution.imagery[0].ratio}
-                  tone="dark"
-                />
-              </Reveal>
+              <SolutionImage image={solution.imagery[0]} tone="dark" />
             </div>
             <div className="grid gap-x-10 gap-y-12 sm:grid-cols-2">
               {solution.focus.map((item, i) => (
@@ -167,11 +222,7 @@ export function SolutionPage({ solution }: { solution: Solution }) {
               </Reveal>
               <Reveal delay={200}>
                 <div className="grid gap-6 border-t border-ink-900/[0.07] pt-8 sm:grid-cols-2">
-                  <ImagePlaceholder
-                    caption={solution.imagery[1].caption}
-                    label={solution.imagery[1].label}
-                    ratio="16/10"
-                  />
+                  <SolutionImage image={solution.imagery[1]} ratio="16/10" />
                   <div className="flex flex-col justify-center">
                     <p className="text-[0.9375rem] leading-relaxed text-slate-ai-700">
                       Every engagement is scoped around what an institution

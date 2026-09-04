@@ -1,10 +1,12 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { TextLink } from "@/components/ui/Button";
+import { ImageReveal } from "@/components/motion";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { FeatureCard, Surface } from "@/components/ui/Card";
 import { QuoteBlock, SignalChain } from "@/components/ui/Editorial";
-import { ImagePlaceholder, VizFrame } from "@/components/ui/Placeholder";
+import { VizFrame } from "@/components/ui/Placeholder";
 import { PageHero } from "@/components/layout/PageHero";
 import { CtaBand } from "@/components/layout/CtaBand";
 import { ArchitectureStack } from "@/components/viz/ArchitectureStack";
@@ -280,14 +282,22 @@ export default function PlatformPage() {
             </div>
 
             <div className="flex flex-col gap-8">
-              <Reveal delay={140}>
-                <ImagePlaceholder
-                  caption="Reserved for product interface — advisor and faculty views of concept-level intelligence."
-                  label="Product screenshot"
-                  ratio="16/10"
-                  tone="dark"
-                />
-              </Reveal>
+              <figure>
+                <ImageReveal className="rounded-lg border border-white/12">
+                  <Image
+                    alt="An interface concept for the intelligence layer: a comprehension curve dipping and recovering across a term, with supporting summary figures. Labels are shown abstracted."
+                    className="w-full"
+                    height={941}
+                    sizes="(min-width: 1024px) 45vw, 100vw"
+                    src="/imagery/interface-concept.png"
+                    width={1672}
+                  />
+                </ImageReveal>
+                <figcaption className="mt-3.5 text-[0.8125rem] leading-relaxed text-slate-ai-400">
+                  Interface concept. Artifact is in active development — this
+                  shows the shape of the intelligence, not a shipped product.
+                </figcaption>
+              </figure>
               <Reveal delay={220}>
                 <Surface className="p-7 lg:p-8" tone="outline-dark">
                   <h3 className="text-[1.125rem] font-bold tracking-tight text-white">
