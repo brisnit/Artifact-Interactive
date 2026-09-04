@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { Button, TextLink } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
@@ -8,7 +9,7 @@ import {
   Surface,
 } from "@/components/ui/Card";
 import { QuoteBlock } from "@/components/ui/Editorial";
-import { ImagePlaceholder, VizFrame } from "@/components/ui/Placeholder";
+import { VizFrame } from "@/components/ui/Placeholder";
 import { SignalWave } from "@/components/ui/SignalWave";
 import { SignalFlow } from "@/components/viz/SignalFlow";
 import { PatternNetwork } from "@/components/viz/PatternNetwork";
@@ -22,7 +23,7 @@ import { Hero } from "@/components/home/Hero";
 import { CategoryBand } from "@/components/home/CategoryBand";
 import { PersonaSequence } from "@/components/home/PersonaSequence";
 import { BespokeEnvironments } from "@/components/home/BespokeEnvironments";
-import { FadeUp, RevealText } from "@/components/motion";
+import { FadeUp, ImageReveal, RevealText } from "@/components/motion";
 import { featuredArticles, formatDate } from "@/content/insights";
 
 export const metadata: Metadata = {
@@ -324,14 +325,16 @@ export default function HomePage() {
           {/* The brand chain already anchors the Platform, About and Contact
               pages; repeating it here made the section's tail read as filler.
               The reserved plate stays, now as a full-width band. */}
-          <FadeUp className="mt-20 lg:mt-24" delay={0.1}>
-            <ImagePlaceholder
-              caption="Reserved for institutional context — campus, classroom, laboratory, and workplace learning environments."
-              label="Environment photography"
-              ratio="32/9"
-              tone="dark"
+          <ImageReveal className="mt-20 rounded-lg border border-white/12 lg:mt-24">
+            <Image
+              alt="A university learning commons seen across its full width: concrete, glass and pale oak in cool daylight, with students and faculty at a distance."
+              className="w-full"
+              height={821}
+              sizes="(min-width: 1024px) 92vw, 100vw"
+              src="/imagery/learning-commons.jpg"
+              width={1916}
             />
-          </FadeUp>
+          </ImageReveal>
         </div>
       </Section>
 
