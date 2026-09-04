@@ -1,3 +1,18 @@
+/*
+  ─────────────────────────────────────────────────────────────────────────────
+  PROVISIONAL LEGAL DOCUMENT — REQUIRES COUNSEL REVIEW BEFORE IT IS RELIED ON.
+
+  This notice describes what the website actually does and states the
+  commitments we hold to in platform engagements. It has not been reviewed by a
+  lawyer. Areas that most warrant review: the FERPA school-official and COPPA
+  language, the lawful-basis and international-transfer sections, and the
+  controller/processor split between this notice and each institution's DPA.
+
+  It deliberately claims no certification we do not hold. Do not add one.
+
+  Nothing on the page tells visitors it is under review — this note is for us.
+  ─────────────────────────────────────────────────────────────────────────────
+*/
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/layout/LegalPage";
 import { site } from "@/lib/site";
@@ -5,18 +20,19 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Privacy",
   description:
-    "How Artifact Interactive handles personal information collected through this website, and how learner data is governed in platform deployments.",
+    "How Artifact Intelligence handles personal information collected through this website, and how learner data is governed in platform deployments.",
+  alternates: { canonical: "/privacy" }
 };
 
 export default function PrivacyPage() {
   return (
     <LegalPage
-      deck="This notice explains what Artifact Interactive collects through this website, what we do with it, and how data in a Learning Intelligence Platform deployment is governed separately."
+      deck="This notice explains what Artifact Intelligence collects through this website, what we do with it, and how data in a Learning Intelligence Platform deployment is governed separately."
       sections={[
         {
           heading: "Who we are",
           paragraphs: [
-            "Artifact Interactive researches, designs, and builds Learning Intelligence Platforms for universities, schools, and organizations. In this notice, “we”, “us”, and “Artifact” mean Artifact Interactive.",
+            "Artifact Intelligence researches, designs, and builds Learning Intelligence Platforms for universities, schools, and organizations. In this notice, “we”, “us”, and “Artifact” mean Artifact Intelligence.",
             `For any question about this notice, or to exercise a right described below, write to ${site.email}.`,
           ],
         },

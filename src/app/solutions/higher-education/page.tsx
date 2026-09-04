@@ -8,6 +8,7 @@ const solution = getSolution("higher-education");
 export const metadata: Metadata = {
   title: solution?.name,
   description: solution?.deck,
+  alternates: { canonical: "/solutions/higher-education" },
 };
 
 export default function Page() {

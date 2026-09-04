@@ -31,6 +31,7 @@ export async function generateMetadata({
   return {
     title: article.title,
     description: article.excerpt,
+    alternates: { canonical: `/insights/${slug}` },
     openGraph: {
       type: "article",
       title: article.title,
@@ -209,7 +210,7 @@ export default async function ArticlePage({
       </Section>
 
       <CtaBand
-        body="Artifact Interactive works with institutions exploring new ways to understand learning, behavior, knowledge, and outcomes."
+        body="Artifact Intelligence works with institutions exploring new ways to understand learning, behavior, knowledge, and outcomes."
         primary={{ label: "Talk With Artifact", href: "/contact" }}
         secondary={{ label: "All Insights", href: "/insights" }}
       />

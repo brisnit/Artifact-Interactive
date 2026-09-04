@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   title: "How It Works",
   description:
     "Capture, connect, understand, model, act, learn — how Artifact turns everyday learning activity into intelligence, as a continuous loop.",
+  alternates: { canonical: "/how-it-works" }
 };
 
 const STEPS: Step[] = [

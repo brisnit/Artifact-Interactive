@@ -8,6 +8,7 @@ const solution = getSolution("business");
 export const metadata: Metadata = {
   title: solution?.name,
   description: solution?.deck,
+  alternates: { canonical: "/solutions/business" },
 };
 
 export default function Page() {

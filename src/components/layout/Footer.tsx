@@ -30,7 +30,7 @@ export function Footer() {
               Learning Intelligence Platform
             </p>
             <p className="mt-5 max-w-[34ch] text-[0.875rem] leading-relaxed text-slate-ai-400">
-              Artifact Interactive explores how human-centered technology, data,
+              Artifact Intelligence explores how human-centered technology, data,
               and intelligence can create better pathways for learning.
             </p>
             <a
@@ -66,7 +66,7 @@ export function Footer() {
 
         <div className="mt-20 flex flex-col gap-5 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-[0.8125rem] text-slate-ai-400">
-            © {new Date().getFullYear()} Artifact Interactive. All rights reserved.
+            © {new Date().getFullYear()} Artifact Intelligence. All rights reserved.
           </p>
           <ul className="flex items-center gap-7">
             {footerNav.legal.map((link) => (

@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
  */
 export function CtaBand({
   title = "What could your institution learn about itself?",
-  body = "Artifact Interactive works with institutions exploring new ways to understand learning, behavior, knowledge, and outcomes.",
+  body = "Artifact Intelligence works with institutions exploring new ways to understand learning, behavior, knowledge, and outcomes.",
   primary = { label: "Talk With Artifact", href: site.cta.secondary.href },
   secondary,
 }: {

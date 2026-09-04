@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: "Solutions",
   description:
     "Bespoke Learning Intelligence operating systems for higher education, high schools, and business and workforce environments.",
+  alternates: { canonical: "/solutions" }
 };
 
 const DIFFERENCES = [

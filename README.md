@@ -1,6 +1,6 @@
-# Artifact Interactive — Learning Intelligence Platform
+# Artifact Intelligence — Learning Intelligence Platform
 
-Marketing and research website for Artifact Interactive.
+Marketing and research website for Artifact Intelligence.
 
 Built with **Next.js (App Router) · TypeScript · Tailwind CSS v4 · GSAP**, deployable to
 Vercel with zero configuration.
@@ -22,8 +22,10 @@ The project uses framework defaults, so no `vercel.json` is required.
 
 1. Push the repository to GitHub, GitLab, or Bitbucket.
 2. Import it at [vercel.com/new](https://vercel.com/new) — Vercel detects Next.js automatically.
-3. Set the production domain, then update `site.url` in [`src/lib/site.ts`](src/lib/site.ts)
-   so canonical URLs, Open Graph metadata, `sitemap.xml`, and `robots.txt` point at it.
+3. Point the domain at the deployment. `site.url` in [`src/lib/site.ts`](src/lib/site.ts) is the
+   single source for `metadataBase`, every per-page canonical, Open Graph URLs, the sitemap,
+   `robots.txt`, and the Organization structured data — change it in one place if the domain
+   ever moves.
 
 Every route is statically prerendered, so the site serves entirely from the edge.
 
@@ -45,7 +47,7 @@ Every route is statically prerendered, so the site serves entirely from the edge
 | `/insights/[slug]` | Individual articles (statically generated) |
 | `/about` | Company origin, practice, and beliefs |
 | `/contact` | Contact form |
-| `/privacy`, `/terms` | Legal placeholders pending review |
+| `/privacy`, `/terms` | Legal documents — provisional, pending counsel review |
 
 ---
 
@@ -231,16 +233,32 @@ Every page is statically prerendered, so HTML and data come from the edge with n
 
 ---
 
-## Placeholders and honesty
+## Honesty constraints
 
-Two things are deliberately unfinished, and marked as such in the interface:
+The site is written to be defensible in a room with a provost or a CIO, which imposes
+constraints worth preserving as it grows.
 
-- **Imagery.** `ImagePlaceholder` reserves labelled space for real photography, product
-  screenshots, and campus imagery. No fabricated AI artwork was used anywhere.
-- **The contact form.** It has no backend. On submit it says so plainly and points to the
-  email address rather than pretending a message was delivered. Wire it to a route handler or
-  form service before launch.
+**Copy** never claims that any system can predict individual human behavior. The vocabulary is
+deliberate: identify signals, surface patterns, model possible pathways, detect emerging risk,
+reveal opportunities, support decision making. There are no invented clients, metrics, studies,
+funding, headcount, or certifications anywhere on the site, and the structured data in the root
+layout asserts only facts the visible copy already states.
 
-Copy throughout avoids claiming that any system can predict individual human behavior. The
-language is deliberately: identify signals, surface patterns, model possible pathways, detect
-emerging risk, reveal opportunities, support decision making.
+**The Platform interface image** is captioned as an interface concept, not a screenshot,
+because there is no shipped product yet. Do not relabel it.
+
+**Imagery is illustrative and AI-generated.** The Terms say so explicitly: it does not depict
+clients, partners, employees, or premises, and no relationship should be inferred. The two
+images on the High Schools page deliberately show empty rooms — the page argues that signals
+about minors carry a higher standard of care, and illustrating it with a photograph of a
+student would contradict that a scroll above.
+
+**The legal documents are provisional.** Both `privacy/page.tsx` and `terms/page.tsx` open with
+a file-level comment saying they require counsel review, and naming the clauses that most
+warrant it. That note is for the team; nothing on the rendered page tells visitors the
+documents are under review.
+
+**The contact form has no server.** It composes the enquiry and hands it to the visitor's mail
+client, addressed to `site.email` — so it genuinely delivers today with no service or key. To
+move to a backend, replace the body of `onSubmit` with a POST; the field names are already the
+payload.

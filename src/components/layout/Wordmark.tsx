@@ -27,7 +27,7 @@ export function Wordmark({
         ~200px image rather than the full-resolution original.
       */}
       <Image
-        alt="Artifact Interactive"
+        alt="Artifact Intelligence"
         className="h-[1.375rem] w-auto lg:h-6"
         height={49}
         priority={priority}
@@ -72,7 +72,7 @@ export function Wordmark({
 
   return (
     <Link
-      aria-label="Artifact Interactive — home"
+      aria-label="Artifact Intelligence — home"
       className="inline-flex rounded-sm transition-opacity duration-300 hover:opacity-70"
       href={href}
     >

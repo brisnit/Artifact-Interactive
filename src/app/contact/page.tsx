@@ -10,7 +10,8 @@ import { brandLines, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Start a conversation with Artifact Interactive about what your institution could learn about itself.",
+    "Start a conversation with Artifact Intelligence about what your institution could learn about itself.",
+  alternates: { canonical: "/contact" }
 };
 
 const REASONS = [
@@ -55,7 +56,7 @@ export default function ContactPage() {
                     {site.email}
                   </a>
                   <p className="mt-5 text-[0.875rem] leading-relaxed text-slate-ai-600">
-                    Artifact Interactive
+                    Artifact Intelligence
                     <br />
                     Learning Intelligence Platform
                   </p>

@@ -27,9 +27,9 @@ import { FadeUp, ImageReveal, RevealText } from "@/components/motion";
 import { featuredArticles, formatDate } from "@/content/insights";
 
 export const metadata: Metadata = {
-  title: "Artifact Interactive — Learning Intelligence Platform",
+  title: "Artifact Intelligence — Learning Intelligence Platform",
   description:
-    "Learning leaves signals. Artifact Interactive creates Learning Intelligence Platforms that turn everyday learning activity into intelligence institutions can use.",
+    "Learning leaves signals. Artifact Intelligence creates Learning Intelligence Platforms that turn everyday learning activity into intelligence institutions can use.",
 };
 
 export default function HomePage() {
@@ -78,7 +78,7 @@ export default function HomePage() {
               </Reveal>
               <Reveal delay={200}>
                 <p className="text-[1.0625rem] leading-relaxed text-slate-ai-700">
-                  Artifact Interactive is researching how those naturally
+                  Artifact Intelligence is researching how those naturally
                   occurring signals can become useful intelligence — an
                   interpretive layer that sits between experience and outcome
                   and explains the relationship between them.

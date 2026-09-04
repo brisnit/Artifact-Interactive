@@ -1,12 +1,12 @@
 export const site = {
-  name: "Artifact Interactive",
+  name: "Artifact Intelligence",
   category: "Learning Intelligence Platform",
-  url: "https://artifactinteractive.com",
+  url: "https://artifactintelligence.co",
   description:
-    "Artifact Interactive creates Learning Intelligence Platforms that turn everyday learning activity into intelligence institutions can use.",
+    "Artifact Intelligence creates Learning Intelligence Platforms that turn everyday learning activity into intelligence institutions can use.",
   /** Every address on the site resolves here — footer, contact panel,
    *  contact form delivery, and the privacy and terms notices. */
-  email: "andrew@artifactintelligence.co",
+  email: "hello@artifactintelligence.co",
   cta: {
     primary: { label: "Explore Learning Intelligence", href: "/platform" },
     secondary: { label: "Talk With Artifact", href: "/contact" },

@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   title: "Platform",
   description:
     "The Learning Intelligence Platform: an intelligence layer spanning signal collection, data connections, pattern recognition, predictive pathways, and decision support.",
+  alternates: { canonical: "/platform" }
 };
 
 const SIGNAL_SOURCES = [

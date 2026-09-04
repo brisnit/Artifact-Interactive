@@ -1,3 +1,16 @@
+/*
+  ─────────────────────────────────────────────────────────────────────────────
+  PROVISIONAL LEGAL DOCUMENT — REQUIRES COUNSEL REVIEW BEFORE IT IS RELIED ON.
+
+  These terms were drafted to be accurate about what the site actually does and
+  conventional in structure. They have not been reviewed by a lawyer. Areas that
+  most warrant review: the governing law and venue clause, the limitation of
+  liability, and the interaction between these terms and the separate platform
+  and data processing agreements.
+
+  Nothing on the page tells visitors it is under review — this note is for us.
+  ─────────────────────────────────────────────────────────────────────────────
+*/
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/layout/LegalPage";
 import { site } from "@/lib/site";
@@ -5,25 +18,26 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Terms",
   description:
-    "Terms governing use of the Artifact Interactive website, including how forward-looking and illustrative content should be read.",
+    "Terms governing use of the Artifact Intelligence website, including how forward-looking and illustrative content should be read.",
+  alternates: { canonical: "/terms" }
 };
 
 export default function TermsPage() {
   return (
     <LegalPage
-      deck="These terms govern use of this website. They also explain how to read what the site describes — because Artifact Interactive is an early-stage research and technology company, and that distinction matters."
+      deck="These terms govern use of this website. They also explain how to read what the site describes — because Artifact Intelligence is an early-stage research and technology company, and that distinction matters."
       sections={[
         {
           heading: "Using this site",
           paragraphs: [
-            "This website is published by Artifact Interactive for information about the company and its research into Learning Intelligence. By using it, you accept these terms. If you do not accept them, please do not use the site.",
+            "This website is published by Artifact Intelligence for information about the company and its research into Learning Intelligence. By using it, you accept these terms. If you do not accept them, please do not use the site.",
             "You may read, reference, quote, and link to this material with attribution. You may not republish it wholesale as your own, or present it in a way that implies Artifact endorses you or your organization.",
           ],
         },
         {
           heading: "Forward-looking statements",
           paragraphs: [
-            "Artifact Interactive is an early-stage research and technology company. Descriptions of the Learning Intelligence Platform on this site describe work in progress, research direction, and intended capability. They are not commitments about features, availability, pricing, timelines, or outcomes, and they may change.",
+            "Artifact Intelligence is an early-stage research and technology company. Descriptions of the Learning Intelligence Platform on this site describe work in progress, research direction, and intended capability. They are not commitments about features, availability, pricing, timelines, or outcomes, and they may change.",
             "Where the site describes what an intelligence layer can do, it describes a capability under active research. Nothing here is a guarantee of any institutional result. In particular, no claim is made that any system can predict the behaviour of an individual person, and language throughout has been chosen to say what we mean: identify signals, surface patterns, model possible pathways, support decisions.",
           ],
         },
@@ -43,7 +57,7 @@ export default function TermsPage() {
         {
           heading: "Intellectual property",
           paragraphs: [
-            "The Artifact Interactive name, wordmark, visual identity, written content, diagrams, and the design and code of this site are the property of Artifact Interactive unless otherwise noted, and are protected by copyright and other rights.",
+            "The Artifact Intelligence name, wordmark, visual identity, written content, diagrams, and the design and code of this site are the property of Artifact Intelligence unless otherwise noted, and are protected by copyright and other rights.",
             "Any third-party names or marks referred to remain the property of their respective owners, and their appearance does not imply any affiliation or endorsement.",
           ],
         },
@@ -68,7 +82,7 @@ export default function TermsPage() {
         {
           heading: "Limitation of liability",
           paragraphs: [
-            "To the extent permitted by law, Artifact Interactive is not liable for indirect, incidental, special, consequential, or punitive damages, or for lost profits, revenue, data, or goodwill, arising from your use of this website.",
+            "To the extent permitted by law, Artifact Intelligence is not liable for indirect, incidental, special, consequential, or punitive damages, or for lost profits, revenue, data, or goodwill, arising from your use of this website.",
             "Nothing in these terms excludes or limits liability that cannot lawfully be excluded or limited — including liability for death or personal injury caused by negligence, or for fraud or fraudulent misrepresentation.",
           ],
         },
@@ -84,10 +98,19 @@ export default function TermsPage() {
             "Our handling of personal information is described in our Privacy notice, which forms part of these terms.",
           ],
         },
+        /*
+          PROVISIONAL — pending counsel review.
+          Governing law and venue below were supplied by the company, not by a
+          lawyer. County-level venue is stated because it was specified; counsel
+          may prefer state-level venue, or a different forum entirely, and may
+          want an arbitration or jury-waiver clause that is deliberately absent
+          here. Do not treat this section as settled.
+        */
         {
           heading: "Governing law",
           paragraphs: [
-            "These terms are governed by the laws of [JURISDICTION TO BE CONFIRMED], and the courts of that jurisdiction have exclusive jurisdiction over any dispute arising from them, without regard to conflict-of-law principles.",
+            "These terms are governed by the laws of the State of California, United States, without regard to its conflict-of-law principles.",
+            "Any dispute arising from these terms or from use of this website will be brought exclusively in the state or federal courts located in San Diego County, California, and you consent to the personal jurisdiction of those courts.",
           ],
         },
         {

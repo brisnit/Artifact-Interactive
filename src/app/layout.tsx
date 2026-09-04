@@ -28,15 +28,30 @@ export const metadata: Metadata = {
     template: `%s — ${site.name}`,
   },
   description: site.description,
+  // metadataBase resolves every relative URL below, and lets per-page
+  // `alternates.canonical` be written as a path rather than an absolute URL.
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName: site.name,
+    url: site.url,
+    locale: "en_US",
     title: `${site.name} — ${site.category}`,
     description: site.description,
   },
-  twitter: { card: "summary_large_image" },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} — ${site.category}`,
+    description: site.description,
+  },
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/icon.svg" }],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
 };
 
@@ -75,6 +90,31 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-dvh antialiased">
+        {/*
+          Organization schema. Deliberately minimal: name, URL, logo,
+          description and a contact point — all of which the site already
+          states in visible copy. No founding date, headcount, funding, awards
+          or ratings, because none of those are established facts.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: site.name,
+              url: site.url,
+              logo: `${site.url}/brand/artifact-logo-black.png`,
+              description: site.description,
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "sales",
+                email: site.email,
+                url: `${site.url}/contact`,
+              },
+            }),
+          }}
+          type="application/ld+json"
+        />
         <MotionProvider />
         <div aria-hidden="true" className="grain-field" />
         <Header />

@@ -180,7 +180,7 @@ export function Hero() {
 
           <div className="mt-10 max-w-[38rem]">
             <p className="hero-support gsap-hidden text-lead text-slate-ai-300">
-              Artifact Interactive creates Learning Intelligence Platforms that
+              Artifact Intelligence creates Learning Intelligence Platforms that
               transform everyday learning activity into intelligence institutions
               can use to understand what is happening, anticipate what may happen
               next, and uncover better paths toward success.

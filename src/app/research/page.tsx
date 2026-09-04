@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title: "Research",
   description:
     "Building the discipline of Learning Intelligence — predictive learning, human signals, learning behavior, institutional intelligence, decision modeling, data ethics, and human-centered AI.",
+  alternates: { canonical: "/research" }
 };
 
 const TOPICS = [
@@ -93,7 +94,7 @@ export default function ResearchPage() {
   return (
     <>
       <PageHero
-        deck="Learning Intelligence is not yet a settled field. Artifact Interactive is researching what it should mean, what it can credibly support, and where its limits are — and publishing that work as we go."
+        deck="Learning Intelligence is not yet a settled field. Artifact Intelligence is researching what it should mean, what it can credibly support, and where its limits are — and publishing that work as we go."
         meta={[
           { label: "Focus", value: "Signals, behavior, and institutional intelligence" },
           { label: "Method", value: "Applied research with institutional partners" },

@@ -11,7 +11,8 @@ import { brandLines } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Artifact Interactive began exploring interaction and feedback loops in 2019. Today we research and build systems that connect human experience, behavioral signals, institutional data, and predictive intelligence.",
+    "Artifact Intelligence began exploring interaction and feedback loops in 2019. Today we research and build systems that connect human experience, behavioral signals, institutional data, and predictive intelligence.",
+  alternates: { canonical: "/about" }
 };
 
 const DISCIPLINES = [
@@ -41,7 +42,7 @@ const TIMELINE = [
   {
     year: "2019",
     title: "Interaction and feedback loops",
-    body: "Artifact Interactive began exploring how individuals could interact with live or recorded messages, and how those interactions could create feedback loops.",
+    body: "Artifact Intelligence began exploring how individuals could interact with live or recorded messages, and how those interactions could create feedback loops.",
   },
   {
     year: "The question",
@@ -56,7 +57,7 @@ const TIMELINE = [
   {
     year: "Now",
     title: "Learning Intelligence Platforms",
-    body: "Artifact Interactive researches and builds systems that connect human experience, behavioral signals, institutional data, and predictive intelligence.",
+    body: "Artifact Intelligence researches and builds systems that connect human experience, behavioral signals, institutional data, and predictive intelligence.",
   },
 ];
 
@@ -78,7 +79,7 @@ export default function AboutPage() {
             <SignalChain lines={brandLines.signalChain} tone="dark" />
           </Surface>
         }
-        deck="Artifact Interactive is a design, technology, and research company building Learning Intelligence Platforms — and researching what that discipline should mean."
+        deck="Artifact Intelligence is a design, technology, and research company building Learning Intelligence Platforms — and researching what that discipline should mean."
         title="We started with a question about feedback loops."
       />
 
@@ -94,7 +95,7 @@ export default function AboutPage() {
             <div className="space-y-7 text-[1.0625rem] leading-relaxed text-slate-ai-700">
               <Reveal>
                 <p>
-                  Artifact Interactive began exploring interaction and feedback
+                  Artifact Intelligence began exploring interaction and feedback
                   loops in 2019. The original work investigated how individuals
                   could interact with live or recorded messages, and how those
                   interactions could create feedback loops capable of revealing
@@ -120,7 +121,7 @@ export default function AboutPage() {
                   produced it. A classroom, a program, a campus, or an
                   organization generates an enormous amount of information about
                   how understanding is forming — almost none of which is captured
-                  as intelligence. Artifact Interactive is now researching and
+                  as intelligence. Artifact Intelligence is now researching and
                   building systems that connect human experience, behavioral
                   signals, institutional data, and predictive intelligence.
                 </p>
@@ -240,7 +241,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-[46rem] text-center">
             <Reveal>
               <p className="font-editorial text-[1.5rem] leading-[1.45] text-ink-900 lg:text-[1.875rem]">
-                Artifact Interactive is an emerging technology and research
+                Artifact Intelligence is an emerging technology and research
                 company. We are early, we are building with institutional
                 partners, and we would rather describe that accurately than
                 inflate it.
@@ -258,7 +259,7 @@ export default function AboutPage() {
       </Section>
 
       <CtaBand
-        body="Artifact Interactive works with institutions exploring new ways to understand learning, behavior, knowledge, and outcomes."
+        body="Artifact Intelligence works with institutions exploring new ways to understand learning, behavior, knowledge, and outcomes."
         primary={{ label: "Talk With Artifact", href: "/contact" }}
         secondary={{ label: "See our Research", href: "/research" }}
       />

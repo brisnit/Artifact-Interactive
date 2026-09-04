@@ -284,7 +284,7 @@ export function SolutionPage({ solution }: { solution: Solution }) {
       </Section>
 
       <CtaBand
-        body={`Artifact Interactive works with ${solution.name.toLowerCase()} environments exploring new ways to understand learning, behavior, knowledge, and outcomes.`}
+        body={`Artifact Intelligence works with ${solution.name.toLowerCase()} environments exploring new ways to understand learning, behavior, knowledge, and outcomes.`}
         primary={{ label: "Talk With Artifact", href: "/contact" }}
         secondary={{ label: "See How It Works", href: "/how-it-works" }}
         title="What could your institution learn about itself?"

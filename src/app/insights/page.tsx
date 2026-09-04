@@ -8,7 +8,8 @@ import { articles } from "@/content/insights";
 export const metadata: Metadata = {
   title: "Insights",
   description:
-    "Writing from Artifact Interactive on learning intelligence, predictive learning, institutional data, and the ethics of intelligence systems in education.",
+    "Writing from Artifact Intelligence on learning intelligence, predictive learning, institutional data, and the ethics of intelligence systems in education.",
+  alternates: { canonical: "/insights" }
 };
 
 export default function InsightsPage() {

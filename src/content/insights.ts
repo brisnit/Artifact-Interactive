@@ -47,7 +47,7 @@ export const articles: Article[] = [
       "Every institution already measures something. Fewer can explain what those measurements mean about how learning is actually unfolding. Learning intelligence is the layer in between.",
     category: "Learning Intelligence",
     author: "Artifact Research",
-    authorRole: "Artifact Interactive",
+    authorRole: "Artifact Intelligence",
     date: "2025-11-18",
     readingTime: 8,
     featured: true,
@@ -98,7 +98,7 @@ export const articles: Article[] = [
       },
       {
         type: "note",
-        text: "Artifact Interactive is actively researching this discipline. The frameworks described here reflect our current thinking and are being developed with institutional partners rather than presented as settled science.",
+        text: "Artifact Intelligence is actively researching this discipline. The frameworks described here reflect our current thinking and are being developed with institutional partners rather than presented as settled science.",
       },
     ],
   },
@@ -111,7 +111,7 @@ export const articles: Article[] = [
       "Learning analytics gave institutions a vocabulary for measurement. What it did not give them was an explanation. The next layer has to account for context, causality, and direction.",
     category: "Learning Intelligence",
     author: "Artifact Research",
-    authorRole: "Artifact Interactive",
+    authorRole: "Artifact Intelligence",
     date: "2025-10-30",
     readingTime: 7,
     featured: true,
@@ -163,7 +163,7 @@ export const articles: Article[] = [
       "Before any software is introduced, a classroom is already producing an enormous stream of information about comprehension, attention, and momentum. Most of it evaporates within minutes.",
     category: "Research",
     author: "Artifact Research",
-    authorRole: "Artifact Interactive",
+    authorRole: "Artifact Intelligence",
     date: "2025-10-14",
     readingTime: 6,
     featured: true,
@@ -210,7 +210,7 @@ export const articles: Article[] = [
       "Predictive language in education deserves scrutiny. The honest version is narrower than the marketing version — and considerably more useful.",
     category: "Predictive Learning",
     author: "Artifact Research",
-    authorRole: "Artifact Interactive",
+    authorRole: "Artifact Intelligence",
     date: "2025-09-26",
     readingTime: 9,
     body: [
@@ -255,7 +255,7 @@ export const articles: Article[] = [
       "Measurement locates a learner on a scale. Understanding explains the conditions that put them there — and that distinction changes what an institution can do.",
     category: "Learning Intelligence",
     author: "Artifact Research",
-    authorRole: "Artifact Interactive",
+    authorRole: "Artifact Intelligence",
     date: "2025-09-08",
     readingTime: 6,
     body: [
@@ -291,7 +291,7 @@ export const articles: Article[] = [
       "The SIS knows enrollment. The LMS knows submissions. Advising knows conversations. No layer holds the relationships between them — and that is where the institution's understanding of itself would live.",
     category: "Institutions",
     author: "Artifact Research",
-    authorRole: "Artifact Interactive",
+    authorRole: "Artifact Intelligence",
     date: "2025-08-21",
     readingTime: 7,
     body: [
@@ -328,7 +328,7 @@ export const articles: Article[] = [
       "Most student success teams are excellent at intervention and starved of early signal. Intelligence changes the timing of the conversation.",
     category: "Institutions",
     author: "Artifact Research",
-    authorRole: "Artifact Interactive",
+    authorRole: "Artifact Intelligence",
     date: "2025-08-05",
     readingTime: 6,
     body: [
@@ -360,7 +360,7 @@ export const articles: Article[] = [
       "Learning is a sequence of decisions made by multiple actors under uncertainty. That structure is well studied — and the tools built for it transfer more cleanly than expected.",
     category: "Predictive Learning",
     author: "Artifact Research",
-    authorRole: "Artifact Interactive",
+    authorRole: "Artifact Intelligence",
     date: "2025-07-17",
     readingTime: 9,
     body: [
@@ -400,7 +400,7 @@ export const articles: Article[] = [
       "Predictive systems in education carry real risk: labeling, self-fulfilling prophecy, surveillance, and inherited bias. These are design problems before they are policy problems.",
     category: "Ethics & Design",
     author: "Artifact Research",
-    authorRole: "Artifact Interactive",
+    authorRole: "Artifact Intelligence",
     date: "2025-06-24",
     readingTime: 10,
     body: [
@@ -438,7 +438,7 @@ export const articles: Article[] = [
       "Human-centered AI in education is often reduced to a disclosure statement. Taken seriously, it is an architectural commitment about where authority sits.",
     category: "Ethics & Design",
     author: "Artifact Research",
-    authorRole: "Artifact Interactive",
+    authorRole: "Artifact Intelligence",
     date: "2025-06-02",
     readingTime: 7,
     body: [
