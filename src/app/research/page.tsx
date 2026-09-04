@@ -4,7 +4,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { ResearchCard, Surface, ArticleCard } from "@/components/ui/Card";
 import { QuoteBlock } from "@/components/ui/Editorial";
-import { ImagePlaceholder } from "@/components/ui/Placeholder";
+import { Figure } from "@/components/ui/Figure";
 import { PageHero } from "@/components/layout/PageHero";
 import { CtaBand } from "@/components/layout/CtaBand";
 import { PatternNetwork } from "@/components/viz/PatternNetwork";
@@ -231,14 +231,13 @@ export default function ResearchPage() {
                   </div>
                 </Surface>
               </Reveal>
-              <Reveal delay={220}>
-                <ImagePlaceholder
-                  caption="Reserved for research artefacts — study diagrams, instrument design, and partner methodology."
-                  label="Research documentation"
-                  ratio="16/9"
-                  tone="dark"
-                />
-              </Reveal>
+              <Figure
+                alt="A research desk from above: overlapping sheets of hand-drawn network diagrams, flowcharts and scatter plots around an open notebook, with a pen, ruler and glasses."
+                height={993}
+                src="/imagery/research-artefacts.jpg"
+                tone="dark"
+                width={1584}
+              />
             </div>
           </div>
         </div>

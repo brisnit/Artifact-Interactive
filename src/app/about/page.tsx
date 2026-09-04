@@ -4,7 +4,6 @@ import { Section, SectionHeading } from "@/components/ui/Section";
 import { FeatureCard, Surface } from "@/components/ui/Card";
 import { QuoteBlock, SignalChain } from "@/components/ui/Editorial";
 import { Figure } from "@/components/ui/Figure";
-import { ImagePlaceholder } from "@/components/ui/Placeholder";
 import { PageHero } from "@/components/layout/PageHero";
 import { CtaBand } from "@/components/layout/CtaBand";
 import { brandLines } from "@/lib/site";
@@ -209,13 +208,13 @@ export default function AboutPage() {
                 maxWidth="max-w-none"
                 title="What we believe about this work."
               />
-              <Reveal className="mt-12" delay={280}>
-                <ImagePlaceholder
-                  caption="Reserved for institutional partnership and workshop context."
-                  label="Partnership context"
-                  ratio="4/3"
-                />
-              </Reveal>
+              <Figure
+                alt="Three people in conversation around a small round table in a plain meeting room, seen from behind, with printed charts and notes spread between them."
+                className="mt-12"
+                height={993}
+                src="/imagery/partnership-meeting.jpg"
+                width={1584}
+              />
             </div>
             <Reveal delay={140}>
               <ol className="divide-y divide-ink-900/[0.07] border-y border-ink-900/[0.07]">

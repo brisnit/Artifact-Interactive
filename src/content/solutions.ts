@@ -226,8 +226,15 @@ export const solutions: Solution[] = [
       },
       {
         label: "Counseling context",
-        caption: "Reserved for advising and student support settings.",
-        ratio: "4/3",
+        caption: "",
+        ratio: "3/2",
+        src: "/imagery/counselling-office.jpg",
+        width: 1536,
+        height: 1024,
+        // The room, empty between appointments — the page argues that signals
+        // about minors carry a higher standard of care, so it does not depict
+        // students to illustrate the point.
+        alt: "A small school counselling office between appointments: two soft chairs angled toward a low table with an open notebook, a plant and a box of tissues, daylight through a blind.",
       },
     ],
     meta: [
