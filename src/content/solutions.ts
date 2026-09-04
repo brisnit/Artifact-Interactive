@@ -20,6 +20,8 @@ export type Solution = {
     ratio: string;
     src?: string;
     alt?: string;
+    width?: number;
+    height?: number;
   }[];
   meta: { label: string; value: string }[];
 };
@@ -112,12 +114,18 @@ export const solutions: Solution[] = [
         // Native 3:2 — cropping to 4:3 would lose the tree and the reflection.
         ratio: "3/2",
         src: "/imagery/campus-quad.jpg",
+        width: 1536,
+        height: 1024,
         alt: "A university quadrangle at blue hour: a concrete and glass academic building with lit windows, a bare tree, and two figures crossing wet paving.",
       },
       {
         label: "Lecture hall",
-        caption: "Reserved for teaching environments where signals are generated.",
-        ratio: "4/3",
+        caption: "",
+        ratio: "16/10",
+        src: "/imagery/lecture-hall.jpg",
+        width: 926,
+        height: 579,
+        alt: "A university lecture theatre mid-session: a lecturer at the board gesturing toward a projected diagram, students seated at tiered desks seen from behind.",
       },
     ],
     meta: [
@@ -212,6 +220,8 @@ export const solutions: Solution[] = [
         // Native 3:2, matching the campus plate on Higher Education.
         ratio: "3/2",
         src: "/imagery/secondary-classroom.jpg",
+        width: 1536,
+        height: 1024,
         alt: "A secondary classroom between sessions: desks and chairs in cool afternoon light, a jacket over a chair back, and a teacher at the windows with their back to camera.",
       },
       {
@@ -308,8 +318,13 @@ export const solutions: Solution[] = [
     imagery: [
       {
         label: "Workplace learning",
-        caption: "Reserved for workplace training and team learning environments.",
-        ratio: "4/3",
+        caption: "",
+        // Native 3:2, matching the rest of the photographic set.
+        ratio: "3/2",
+        src: "/imagery/dealership-service.jpg",
+        width: 1536,
+        height: 1024,
+        alt: "A dealership service workshop: three technicians grouped beneath a vehicle on a lift, the senior of them gesturing toward a component while holding a tablet.",
       },
       {
         label: "Team context",

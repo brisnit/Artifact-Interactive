@@ -54,10 +54,10 @@ function SolutionImage({
         <Image
           alt={image.alt ?? ""}
           className="w-full"
-          height={1024}
+          height={image.height ?? 1024}
           sizes="(min-width: 1024px) 45vw, 100vw"
           src={image.src}
-          width={1536}
+          width={image.width ?? 1536}
         />
       </ImageReveal>
       {image.caption && (
