@@ -57,6 +57,18 @@ export const navigation: NavItem[] = [
     label: "Research",
     href: "/research",
     description: "Building the discipline of Learning Intelligence.",
+    children: [
+      {
+        label: "Our Research",
+        href: "/research",
+        description: "What we are studying, and how we hold ourselves to it.",
+      },
+      {
+        label: "Partnerships",
+        href: "/partnerships",
+        description: "Institutions exploring these questions with us.",
+      },
+    ],
   },
   {
     label: "Insights",
@@ -75,6 +87,7 @@ export const footerNav = {
     { label: "Platform", href: "/platform" },
     { label: "How It Works", href: "/how-it-works" },
     { label: "Research", href: "/research" },
+    { label: "Partnerships", href: "/partnerships" },
   ],
   solutions: [
     { label: "Higher Education", href: "/solutions/higher-education" },
@@ -84,6 +97,7 @@ export const footerNav = {
   company: [
     { label: "About", href: "/about" },
     { label: "Insights", href: "/insights" },
+    { label: "Investors", href: "/investors" },
     { label: "Contact", href: "/contact" },
   ],
   legal: [
