@@ -430,7 +430,8 @@ export default function InvestorsPage() {
                       name: "message",
                       label: "Message",
                       multiline: true,
-                      placeholder: "What resonates, and what you would want to dig into.",
+                      placeholder:
+                        "Share what interests you about Artifact Intelligence and what you’d like to explore in a conversation with our team.",
                     },
                   ]}
                   privacyNote="This goes directly to the founders. We use what you send only to respond."
