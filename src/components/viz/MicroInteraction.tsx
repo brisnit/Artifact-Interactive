@@ -109,7 +109,7 @@ function PromptCard({
             <button
               aria-pressed={isOn}
               className={cn(
-                "rounded-md border px-3.5 py-2 text-[0.8125rem] font-semibold tracking-tight",
+                "whitespace-nowrap rounded-md border px-3.5 py-2 text-[0.8125rem] font-semibold tracking-tight",
                 "transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
                 isOn
                   ? "border-signal-600 bg-signal-600 text-white shadow-[0_8px_20px_-12px_rgba(69,109,244,0.9)]"

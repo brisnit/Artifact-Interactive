@@ -25,6 +25,18 @@ export const navigation: NavItem[] = [
     label: "Platform",
     href: "/platform",
     description: "The intelligence layer between experience and outcome.",
+    children: [
+      {
+        label: "The Platform",
+        href: "/platform",
+        description: "The intelligence layer between experience and outcome.",
+      },
+      {
+        label: "Private AI",
+        href: "/private-ai",
+        description: "Bring AI to the knowledge, on infrastructure you control.",
+      },
+    ],
   },
   {
     label: "How It Works",
@@ -86,6 +98,7 @@ export const footerNav = {
   platform: [
     { label: "Platform", href: "/platform" },
     { label: "How It Works", href: "/how-it-works" },
+    { label: "Private AI", href: "/private-ai" },
     { label: "Research", href: "/research" },
     { label: "Partnerships", href: "/partnerships" },
   ],

@@ -271,7 +271,7 @@ function Choices({ field, dark }: { field: InquiryField; dark: boolean }) {
             />
             <span
               className={cn(
-                "inline-block rounded-md border px-4 py-2.5 text-[0.875rem] font-medium",
+                "inline-block whitespace-nowrap rounded-md border px-3.5 py-2.5 text-[0.8125rem] font-medium sm:px-4 sm:text-[0.875rem]",
                 "transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
                 "peer-checked:border-signal-600 peer-checked:bg-signal-600 peer-checked:text-white",
                 "peer-focus-visible:outline-2 peer-focus-visible:outline-offset-3 peer-focus-visible:outline-signal-500",

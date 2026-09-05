@@ -6,7 +6,10 @@ type Variant = "primary" | "secondary" | "ghost" | "inverse" | "inverse-outline"
 type Size = "sm" | "md" | "lg";
 
 const base =
-  "group/btn inline-flex items-center justify-center gap-2.5 rounded-full font-semibold tracking-tight " +
+  // whitespace-nowrap: a CTA label must never break across lines. The size
+  // scale below steps down on narrow viewports so that holding one line does
+  // not push the button past its container.
+  "group/btn inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold tracking-tight sm:gap-2.5 " +
   "transition-[background-color,color,border-color,box-shadow,transform] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] " +
   "active:translate-y-px disabled:pointer-events-none disabled:opacity-50";
 
@@ -24,9 +27,9 @@ const variants: Record<Variant, string> = {
 };
 
 const sizes: Record<Size, string> = {
-  sm: "h-9 px-4 text-[0.8125rem]",
-  md: "h-11 px-6 text-[0.875rem]",
-  lg: "h-[3.25rem] px-8 text-[0.9375rem]",
+  sm: "h-9 px-3.5 text-[0.75rem] sm:px-4 sm:text-[0.8125rem]",
+  md: "h-11 px-4 text-[0.8125rem] sm:px-6 sm:text-[0.875rem]",
+  lg: "h-12 px-5 text-[0.8125rem] sm:h-[3.25rem] sm:px-8 sm:text-[0.9375rem]",
 };
 
 type ButtonProps = {
