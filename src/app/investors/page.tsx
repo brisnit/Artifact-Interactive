@@ -17,7 +17,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Investors",
   description:
-    "Artifact Intelligence is building an intelligence layer between experience and action, starting with learning. The thesis, the entry point, and where the work stands today.",
+    "Artifact Intelligence begins as intelligence across the systems an institution already runs, and can become the environment they converge into — starting with learning. The thesis, the entry point, and where the work stands today.",
   alternates: { canonical: "/investors" },
 };
 
@@ -208,9 +208,11 @@ export default function InvestorsPage() {
               />
               <FadeUp delay={0.26}>
                 <p className="mt-8 text-[1.0625rem] leading-relaxed text-slate-ai-700">
-                  Artifact Intelligence is being designed around the possibility
-                  that those artifacts can become an intelligence layer capable
-                  of helping organizations understand experiences as they unfold.
+                  Artifact begins as intelligence across the systems an
+                  institution already runs. As more of the institution connects
+                  to that intelligence, the platform can become the environment
+                  those systems converge into — a Learning Intelligence
+                  Operating System.
                 </p>
                 <p className="mt-8 text-[1.25rem] font-semibold leading-snug tracking-tight text-ink-900">
                   One underlying intelligence thesis. Multiple environments where
@@ -220,6 +222,68 @@ export default function InvestorsPage() {
             </div>
             <div className="rounded-xl border border-ink-900/10 bg-ink-950 p-8 lg:p-10">
               <PlatformExpansion />
+            </div>
+          </div>
+
+          {/* Depth, alongside the breadth shown above: what the platform can
+              become inside one institution. Kept short on purpose — Higher
+              Education carries the full argument. */}
+          <div className="mt-20 grid gap-12 border-t border-ink-900/10 pt-16 lg:mt-24 lg:grid-cols-[1fr_1.1fr] lg:gap-20 lg:pt-20">
+            <div>
+              <h3 className="text-statement text-ink-900" id="investor-architecture">
+                <RevealText trigger="scroll">
+                  A new center of gravity, not another tool.
+                </RevealText>
+              </h3>
+              <FadeUp delay={0.18}>
+                <p className="mt-7 text-[1.0625rem] leading-relaxed text-slate-ai-700">
+                  The larger opportunity isn&apos;t analytics, predictive
+                  learning or an AI tool on its own. It is an architecture in
+                  which intelligence becomes the center of an organization,
+                  rather than one more tool attached to its existing software
+                  stack.
+                </p>
+              </FadeUp>
+            </div>
+            <div>
+              <StaggerGroup
+                as="ol"
+                className="border-t border-ink-900/10"
+                selector=":scope > li"
+                stagger={0.08}
+              >
+                {[
+                  "Existing institutional systems",
+                  "Connected intelligence",
+                  "Unified experiences",
+                  "A Learning Intelligence Operating System",
+                ].map((step, i, all) => (
+                  <li
+                    className="flex items-baseline gap-6 border-b border-ink-900/10 py-5"
+                    key={step}
+                  >
+                    <span className="index-numeral font-mono text-[0.6875rem] text-signal-600">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span
+                      className={
+                        i === all.length - 1
+                          ? "text-[1.125rem] font-bold tracking-tight text-signal-600"
+                          : "text-[1.125rem] font-semibold tracking-tight text-ink-900"
+                      }
+                    >
+                      {step}
+                    </span>
+                  </li>
+                ))}
+              </StaggerGroup>
+              <FadeUp delay={0.1}>
+                <p className="mt-6 text-[0.9375rem] leading-relaxed text-slate-ai-600">
+                  Along the way, the traditional LMS can remain part of the
+                  architecture, recede in importance, or eventually become
+                  unnecessary — depending on the institution.
+                </p>
+              </FadeUp>
             </div>
           </div>
         </div>
