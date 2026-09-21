@@ -12,8 +12,10 @@ import { FadeUp, RevealText, StaggerGroup } from "@/components/motion";
 
 const CONTRASTS = [
   {
-    not: "Not a learning platform.",
-    body: "Artifact does not deliver content or replace an LMS. It reads what those environments already produce.",
+    // "Not another LMS", not "not a learning platform": keeps the distinction
+    // from LMS vendors without ruling out Artifact becoming the environment.
+    not: "Not another LMS.",
+    body: "An LMS organizes courses. Artifact is built to understand learning — alongside the LMS you run today, or growing into the environment beyond it.",
   },
   {
     not: "Not a dashboard.",
@@ -43,16 +45,16 @@ export function CategoryBand() {
             {/* Split deliberately: the definition carries the display weight,
                 the mechanism follows at reading size. One block of 30 words at
                 display size is a wall — two of 14 scans in a glance. */}
-            <h2 className="text-statement max-w-[40rem] text-ink-900" id="category">
+            <h2 className="text-statement max-w-[46rem] text-ink-900" id="category">
               <RevealText trigger="scroll">
-                A Learning Intelligence Platform is an intelligence layer between
-                experience and outcome.
+                A Learning Intelligence Platform connects what an institution
+                runs — and understands what it all means.
               </RevealText>
             </h2>
             <FadeUp delay={0.12}>
               <p className="text-lead mt-6 max-w-[44rem] text-slate-ai-700">
-                It reads the signals a learning environment already produces —
-                and explains what they mean.
+                It can begin as an intelligence layer across the systems you
+                already have. It doesn&apos;t have to end there.
               </p>
             </FadeUp>
 

@@ -48,12 +48,21 @@ export function DrawSvg({
     const nodes = root.querySelectorAll<SVGElement>("[data-node]");
     const labels = root.querySelectorAll<SVGElement>("[data-label]");
 
+    // Animate each element back to *its own* opacity, not to 1. A translucent
+    // halo (opacity="0.12") was being tweened to fully opaque and rendering as
+    // a solid disc. The attribute survives GSAP's inline style, so it is a
+    // reliable record of the resting value.
+    const rest = (_i: number, el: Element) => {
+      const attr = el.getAttribute("opacity");
+      return attr === null ? 1 : parseFloat(attr);
+    };
+
     if (prefersReducedMotion()) {
       // Guard each collection: gsap.set throws on an empty NodeList, and most
       // diagrams use only a subset of draw/node/label.
-      if (paths.length) gsap.set(paths, { strokeDashoffset: 0, opacity: 1 });
-      if (nodes.length) gsap.set(nodes, { opacity: 1, scale: 1 });
-      if (labels.length) gsap.set(labels, { opacity: 1 });
+      if (paths.length) gsap.set(paths, { strokeDashoffset: 0, opacity: rest });
+      if (nodes.length) gsap.set(nodes, { opacity: rest, scale: 1 });
+      if (labels.length) gsap.set(labels, { opacity: rest });
       return;
     }
 
@@ -68,7 +77,7 @@ export function DrawSvg({
       gsap.set(path, {
         strokeDasharray: length,
         strokeDashoffset: length,
-        opacity: 1,
+        opacity: rest(0, path),
       });
     });
     if (nodes.length) {
@@ -87,7 +96,7 @@ export function DrawSvg({
         gsap.set(path, {
           strokeDasharray: length,
           strokeDashoffset: length,
-          opacity: 1,
+          opacity: rest(0, path),
         });
       });
 
@@ -118,7 +127,7 @@ export function DrawSvg({
         tl.to(
           nodes,
           {
-            opacity: 1,
+            opacity: rest,
             scale: 1,
             duration: scrub ? duration * 0.5 : 0.6,
             ease: scrub ? "none" : EASE.arrive,
@@ -131,7 +140,7 @@ export function DrawSvg({
         tl.to(
           labels,
           {
-            opacity: 1,
+            opacity: rest,
             duration: scrub ? duration * 0.4 : 0.7,
             ease: "none",
             stagger: 0.05,

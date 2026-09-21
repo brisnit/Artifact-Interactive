@@ -10,6 +10,8 @@ import { VizFrame } from "@/components/ui/Placeholder";
 import { PageHero } from "@/components/layout/PageHero";
 import { CtaBand } from "@/components/layout/CtaBand";
 import { ArchitectureStack } from "@/components/viz/ArchitectureStack";
+import { AdoptionPath } from "@/components/viz/AdoptionPath";
+import { OwnershipPrinciple } from "@/components/ui/OwnershipPrinciple";
 import { SignalFlow } from "@/components/viz/SignalFlow";
 import { PredictivePaths } from "@/components/viz/PredictivePaths";
 import { LongitudinalBand } from "@/components/viz/MicroInteraction";
@@ -18,7 +20,7 @@ import { brandLines } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Platform",
   description:
-    "The Learning Intelligence Platform: an intelligence layer spanning signal collection, data connections, pattern recognition, predictive pathways, and decision support.",
+    "The Learning Intelligence Platform: an intelligence layer across the systems an institution runs today, designed to grow into that institution's Learning Intelligence Operating System.",
   alternates: { canonical: "/platform" }
 };
 
@@ -54,7 +56,7 @@ const CAPABILITIES = [
   {
     index: "02",
     title: "Data Connections",
-    body: "Join signals to the systems an institution already runs. The intelligence layer reads from the SIS, LMS, and data warehouse rather than competing with them.",
+    body: "Join signals to the systems an institution already runs — SIS, LMS, CRM, advising and assessment — without asking any of them to move. Over time, capabilities can consolidate into Artifact itself, at whatever pace the institution chooses.",
   },
   {
     index: "03",
@@ -87,9 +89,9 @@ export default function PlatformPage() {
             <SignalChain lines={brandLines.signalChain} tone="dark" />
           </Surface>
         }
-        deck="A Learning Intelligence Platform is an intelligence layer that helps an institution understand how people are actually learning, engaging, progressing, struggling, adapting, and succeeding — and what that suggests about what happens next."
+        deck="A Learning Intelligence Platform helps an institution understand how people are actually learning, engaging, progressing, struggling, adapting, and succeeding — and what that suggests about what happens next. It begins alongside the systems you already run, and can grow into the environment they converge into."
         meta={[
-          { label: "Layer", value: "Between experience and outcome" },
+          { label: "Begins as", value: "An intelligence layer — no migration" },
           { label: "Input", value: "Naturally occurring signals" },
           { label: "Output", value: "Pathways, not verdicts" },
           { label: "Authority", value: "People decide; the system informs" },
@@ -109,21 +111,22 @@ export default function PlatformPage() {
             <div className="space-y-7 text-[1.0625rem] leading-relaxed text-slate-ai-700">
               <Reveal>
                 <p>
-                  Most educational technology sits inside the learning
-                  experience: a place to deliver content, collect submissions, or
-                  administer a program. A Learning Intelligence Platform sits
-                  beside all of it, reading what those environments produce and
-                  explaining what it means.
+                  Most educational technology organizes activity: a place to
+                  deliver content, collect submissions, record grades, or
+                  administer a program. A Learning Intelligence Platform is built
+                  around a different question — not what happened, but what it
+                  means, and what should happen next.
                 </p>
               </Reveal>
               <Reveal delay={90}>
                 <p>
                   It is not a reporting tool, because a report describes an
                   endpoint. It is not a data warehouse, because storage is not
-                  interpretation. It is not a replacement for the systems an
-                  institution already depends on — it is the layer those systems
-                  have never had, the one that holds the relationships between
-                  them.
+                  interpretation. It can begin beside the systems an institution
+                  already depends on — the layer those systems have never had,
+                  holding the relationships between them. And where an
+                  institution chooses, it can grow into the environment those
+                  systems were only ever parts of.
                 </p>
               </Reveal>
               <Reveal delay={180}>
@@ -157,6 +160,24 @@ export default function PlatformPage() {
           />
           <div className="mt-16 lg:mt-20">
             <ArchitectureStack />
+          </div>
+        </div>
+      </Section>
+
+      {/* ---- Adoption: from intelligence layer to operating system ---- */}
+      <Section aria-labelledby="adoption-heading" id="adoption" tone="paper">
+        <div className="container-wide">
+          <SectionHeading
+            deck="Artifact is a Learning Intelligence Platform. Built out across an institution, it can become that institution's Learning Intelligence Operating System — at whatever pace, and to whatever extent, the institution chooses."
+            id="adoption-heading"
+            maxWidth="max-w-[54rem]"
+            title="Start as an intelligence layer. Grow into an operating system."
+          />
+          <div className="mt-14 lg:mt-20">
+            <AdoptionPath />
+          </div>
+          <div className="mt-20 border-t border-ink-900/10 pt-16 lg:mt-28 lg:pt-20">
+            <OwnershipPrinciple />
           </div>
         </div>
       </Section>

@@ -19,7 +19,7 @@ const LAYERS: Layer[] = [
     role: "Where learning actually happens",
     nodes: ["Students", "Faculty", "Systems", "Content"],
     detail:
-      "The lectures, labs, seminars, assignments, conversations, and platforms that already exist. Artifact does not replace this layer or ask it to change shape.",
+      "The lectures, labs, seminars, assignments, conversations, and platforms where learning happens. Artifact can work across them exactly as they are today — or progressively become the environment they happen in.",
   },
   {
     id: "signal",

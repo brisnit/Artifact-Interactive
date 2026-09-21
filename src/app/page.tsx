@@ -23,13 +23,14 @@ import { Hero } from "@/components/home/Hero";
 import { CategoryBand } from "@/components/home/CategoryBand";
 import { PersonaSequence } from "@/components/home/PersonaSequence";
 import { BespokeEnvironments } from "@/components/home/BespokeEnvironments";
+import { CenterOfGravity } from "@/components/viz/CenterOfGravity";
 import { FadeUp, ImageReveal, RevealText } from "@/components/motion";
 import { featuredArticles, formatDate } from "@/content/insights";
 
 export const metadata: Metadata = {
   title: "Artifact Intelligence — Learning Intelligence Platform",
   description:
-    "Learning leaves signals. Artifact Intelligence creates Learning Intelligence Platforms that turn everyday learning activity into intelligence institutions can use.",
+    "Learning leaves signals. Artifact Intelligence creates Learning Intelligence Platforms that work with the systems institutions already run — and create a path beyond them.",
 };
 
 export default function HomePage() {
@@ -275,7 +276,78 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* ================= 7 · BESPOKE OPERATING SYSTEMS ================= */}
+      {/* ================= 7 · KEEP YOUR LMS. OR OUTGROW IT. ================= */}
+      <Section aria-labelledby="outgrow" tone="light">
+        <div className="container-wide">
+          <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-end lg:gap-20">
+            <h2 className="text-display-sm text-ink-900" id="outgrow">
+              <RevealText trigger="scroll">Keep your LMS.</RevealText>
+              <RevealText className="text-signal-600" delay={0.14} trigger="scroll">
+                Or outgrow it.
+              </RevealText>
+            </h2>
+            <div>
+              <FadeUp>
+                <p className="text-lead text-ink-800">
+                  Artifact works with the systems an institution has today —
+                  while creating a path beyond the limits of those systems.
+                </p>
+              </FadeUp>
+              <FadeUp delay={0.1}>
+                <p className="mt-6 text-[1.0625rem] leading-relaxed text-slate-ai-700">
+                  For most institutions, digital learning is organized around the
+                  LMS. Student information, advising, analytics, communications
+                  and dashboards accumulated around it — and now AI is being
+                  attached on top. Artifact proposes a different center of
+                  gravity: put intelligence at the center, and let the rest of
+                  the institution organize around it.
+                </p>
+              </FadeUp>
+            </div>
+          </div>
+
+          <div className="mt-16 lg:mt-24">
+            <CenterOfGravity />
+          </div>
+
+          <div className="mt-16 grid gap-x-10 gap-y-14 md:grid-cols-2 lg:mt-24 lg:gap-x-20">
+            <FadeUp>
+              <FeatureCard index="01" title="Intelligence across your existing stack">
+                Begin without changing your LMS. Artifact connects to the systems
+                you already run and creates intelligence across them. Nothing has
+                to migrate, every existing system keeps operating, and the
+                intelligence grows more valuable with each system connected.
+              </FeatureCard>
+            </FadeUp>
+            <FadeUp delay={0.1}>
+              <FeatureCard index="02" title="An intelligent learning environment">
+                For institutions ready to rethink the architecture, Artifact can
+                progressively grow into the primary environment for learning — so
+                courses, assessment, advising, communication and AI begin working
+                as one. Legacy systems are then weighed one at a time: some stay
+                connected, some become unnecessary.
+              </FeatureCard>
+            </FadeUp>
+          </div>
+
+          <FadeUp delay={0.1}>
+            <div className="mt-14 flex flex-col gap-6 border-t border-ink-900/10 pt-8 lg:flex-row lg:items-center lg:justify-between">
+              <p className="font-editorial text-[1.25rem] italic leading-snug text-slate-ai-700">
+                Both begin in the same place. How far an institution goes is its
+                own decision.
+              </p>
+              <div className="flex flex-col gap-4 sm:flex-row sm:gap-8">
+                <TextLink href="/solutions/higher-education">
+                  Intelligence at the center of the university
+                </TextLink>
+                <TextLink href="/platform#adoption">The adoption path</TextLink>
+              </div>
+            </div>
+          </FadeUp>
+        </div>
+      </Section>
+
+      {/* ================= 8 · BESPOKE OPERATING SYSTEMS ================= */}
       <Section aria-labelledby="bespoke" tone="deep">
         <div aria-hidden="true" className="absolute inset-0 grid-texture" />
         <div
@@ -289,7 +361,7 @@ export default function HomePage() {
                 Your institution is not generic.
               </RevealText>
               <RevealText className="text-signal-400" delay={0.18} trigger="scroll">
-                Its intelligence layer shouldn&apos;t be either.
+                Its operating system shouldn&apos;t be either.
               </RevealText>
             </h2>
           </div>
@@ -299,16 +371,16 @@ export default function HomePage() {
               <p className="text-lead text-slate-ai-300">
                 Institutions differ in culture, pedagogy, community, objectives,
                 data ecosystem, student population, business model, and teaching
-                philosophy. An intelligence layer that ignores those differences
-                will describe an institution that does not exist.
+                philosophy. Intelligence that ignores those differences will
+                describe an institution that does not exist.
               </p>
             </FadeUp>
             <FadeUp delay={0.1}>
               <p className="text-[1.0625rem] leading-relaxed text-slate-ai-400">
-                We research, design, and build bespoke Learning Intelligence
-                operating systems around the specific environment of an
-                institution — its people, its data, and the decisions it actually
-                needs to make.
+                Artifact is a Learning Intelligence Platform. Built out across an
+                institution, it can become that institution&apos;s Learning
+                Intelligence Operating System — shaped around its people, its
+                data, and the decisions it actually needs to make.
               </p>
               <div className="mt-8">
                 <Button href="/solutions" variant="inverse" withArrow>
@@ -338,7 +410,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* ================= 8 · RESEARCH / THOUGHT LEADERSHIP ================= */}
+      {/* ================= 9 · RESEARCH / THOUGHT LEADERSHIP ================= */}
       <Section aria-labelledby="research" tone="paper">
         <div className="container-artifact">
           <SectionHeading
@@ -365,7 +437,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* ================= 9 · FINAL CTA ================= */}
+      {/* ================= 10 · FINAL CTA ================= */}
       <CtaBand secondary={{ label: "Explore the Platform", href: "/platform" }} />
     </>
   );

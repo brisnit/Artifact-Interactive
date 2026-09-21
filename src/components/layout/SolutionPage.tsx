@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ImageReveal } from "@/components/motion";
+import { FadeUp, ImageReveal } from "@/components/motion";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { FeatureCard, Surface } from "@/components/ui/Card";
@@ -8,6 +8,10 @@ import { ImagePlaceholder } from "@/components/ui/Placeholder";
 import { PageHero } from "@/components/layout/PageHero";
 import { CtaBand } from "@/components/layout/CtaBand";
 import { SignalFlow } from "@/components/viz/SignalFlow";
+import { CenterOfGravity } from "@/components/viz/CenterOfGravity";
+import { AdoptionPath } from "@/components/viz/AdoptionPath";
+import { QuestionContrast } from "@/components/ui/QuestionContrast";
+import { OwnershipPrinciple } from "@/components/ui/OwnershipPrinciple";
 import { solutions, type Solution } from "@/content/solutions";
 
 /**
@@ -143,8 +147,33 @@ export function SolutionPage({ solution }: { solution: Solution }) {
         </div>
       </Section>
 
+      {/* ---- Vision: the LMS does not have to stay the center ---- */}
+      {solution.vision && (
+        <Section aria-labelledby="vision" tone="paper">
+          <div className="container-wide">
+            <SectionHeading
+              deck={solution.vision.deck}
+              id="vision"
+              maxWidth="max-w-[58rem]"
+              title={solution.vision.title}
+            />
+            <div className="mt-16 lg:mt-20">
+              <CenterOfGravity />
+            </div>
+            <div className="mt-20 border-t border-ink-900/10 pt-16 lg:mt-28 lg:pt-20">
+              <QuestionContrast />
+            </div>
+            <FadeUp delay={0.1}>
+              <p className="mt-16 max-w-[48rem] font-editorial text-[1.5rem] leading-snug text-ink-900 lg:text-[1.875rem]">
+                {solution.vision.closing}
+              </p>
+            </FadeUp>
+          </div>
+        </Section>
+      )}
+
       {/* ---- Problems ---- */}
-      <Section aria-labelledby="problems" tone="paper">
+      <Section aria-labelledby="problems" tone={solution.vision ? "light" : "paper"}>
         <div className="container-artifact">
           <SectionHeading
             deck="These are the questions institutions in this environment bring to us most often. Artifact does not claim to answer any of them completely — it makes the conditions surrounding them visible earlier."
@@ -153,9 +182,19 @@ export function SolutionPage({ solution }: { solution: Solution }) {
           />
           <div className="mt-14 grid gap-x-10 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
             {solution.problems.map((problem, i) => (
-              <Reveal delay={(i % 3) * 100} key={problem.title}>
+              <Reveal
+                className={problem.featured ? "md:col-span-2 lg:col-span-3" : undefined}
+                delay={(i % 3) * 100}
+                key={problem.title}
+              >
                 <FeatureCard className="h-full" title={problem.title}>
-                  {problem.body}
+                  {problem.featured ? (
+                    <span className="block max-w-[52rem] text-[1.0625rem]">
+                      {problem.body}
+                    </span>
+                  ) : (
+                    problem.body
+                  )}
                 </FeatureCard>
               </Reveal>
             ))}
@@ -195,6 +234,26 @@ export function SolutionPage({ solution }: { solution: Solution }) {
           </div>
         </div>
       </Section>
+
+      {/* ---- Progression: connected systems to one environment ---- */}
+      {solution.progression && (
+        <Section aria-labelledby="progression" tone="paper">
+          <div className="container-wide">
+            <SectionHeading
+              deck={solution.progression.deck}
+              id="progression"
+              maxWidth="max-w-[56rem]"
+              title={solution.progression.title}
+            />
+            <div className="mt-14 lg:mt-20">
+              <AdoptionPath />
+            </div>
+            <div className="mt-20 border-t border-ink-900/10 pt-16 lg:mt-28 lg:pt-20">
+              <OwnershipPrinciple id={`ownership-${solution.slug}`} />
+            </div>
+          </div>
+        </Section>
+      )}
 
       {/* ---- The chain, restated in context ---- */}
       <Section tone="light">

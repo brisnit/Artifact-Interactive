@@ -24,12 +24,12 @@ export const navigation: NavItem[] = [
   {
     label: "Platform",
     href: "/platform",
-    description: "The intelligence layer between experience and outcome.",
+    description: "An intelligence layer that can grow into an operating system.",
     children: [
       {
         label: "The Platform",
         href: "/platform",
-        description: "The intelligence layer between experience and outcome.",
+        description: "An intelligence layer that can grow into an operating system.",
       },
       {
         label: "Private AI",

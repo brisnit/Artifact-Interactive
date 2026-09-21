@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const REASONS = [
   {
     title: "Institutional exploration",
-    body: "You are considering what an intelligence layer would mean for a university, school system, or organization.",
+    body: "You are considering what an intelligence layer — or a new kind of learning environment — would mean for a university, school system, or organization.",
   },
   {
     title: "Research collaboration",

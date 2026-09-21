@@ -45,9 +45,9 @@ const STEPS: Step[] = [
     summary:
       "Signals connect with context, activity, historical behavior, and institutional data.",
     detail:
-      "Alone, a comprehension signal is an opinion. Joined to attendance, submissions, curriculum sequence, advising history, and prior outcomes, it becomes evidence. Artifact reads from the systems an institution already runs rather than asking it to migrate.",
+      "Alone, a comprehension signal is an opinion. Joined to attendance, submissions, curriculum sequence, advising history, and prior outcomes, it becomes evidence. Artifact begins by connecting to the systems an institution already runs: nothing has to migrate, and every existing system keeps operating. Where an institution later chooses to consolidate, capabilities can move into Artifact over time.",
     points: [
-      "Reads from the SIS, LMS, and data warehouse; replaces neither",
+      "Connects to the SIS, LMS, and data warehouse — no migration to begin",
       "Identity and access governed by institutional policy",
       "Purpose limitation enforced in the schema, not only in policy",
     ],
@@ -196,11 +196,11 @@ export default function HowItWorksPage() {
                     },
                     {
                       term: "Of faculty",
-                      def: "No change to how they teach. Prompts are placed with them, not for them.",
+                      def: "No change to how they teach to begin. Prompts are placed with them, not for them. Where an institution later consolidates, their tools move into one place — not more places.",
                     },
                     {
                       term: "Of IT",
-                      def: "Read access to existing systems, governed by institutional policy and reviewed on the institution's terms.",
+                      def: "To begin, governed read access to existing systems, reviewed on the institution's terms. Any deeper consolidation is a joint architectural decision, made on the institution's timeline.",
                     },
                     {
                       term: "Of leadership",

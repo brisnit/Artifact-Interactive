@@ -6,7 +6,8 @@ export type Solution = {
   deck: string;
   intro: string[];
   audiences: { label: string; note: string }[];
-  problems: { title: string; body: string }[];
+  /** `featured` renders full width, ahead of the grid. */
+  problems: { title: string; body: string; featured?: boolean }[];
   focus: { index: string; title: string; body: string }[];
   signals: string[];
   caution: string;
@@ -24,6 +25,13 @@ export type Solution = {
     height?: number;
   }[];
   meta: { label: string; value: string }[];
+  /**
+   * The Learning Intelligence Operating System story. Optional: Higher
+   * Education carries it; High Schools and Business stay on the
+   * intelligence-layer positioning and leave these unset.
+   */
+  vision?: { title: string; deck: string; closing: string };
+  progression?: { title: string; deck: string };
 };
 
 export const solutions: Solution[] = [
@@ -31,16 +39,20 @@ export const solutions: Solution[] = [
     slug: "higher-education",
     name: "Higher Education",
     shortName: "Universities",
-    title: "An intelligence layer for how a university actually learns.",
+    title: "Intelligence at the center of the university.",
     deck:
-      "Understand the learning environment across students, faculty, programs, curriculum, engagement, retention, and outcomes — and the conditions that surround each of them.",
+      "Artifact works with the systems a university runs today — and creates a path beyond them. Begin by connecting what you already have. Build toward an environment where learning, advising, curriculum and institutional knowledge work as one.",
     intro: [
       "A university already knows an enormous amount about itself. The difficulty is that the knowledge is distributed: the registrar holds one part, the LMS another, advising a third, and the faculty member who noticed the problem in week three holds a fourth that was never written down.",
-      "Artifact researches and builds a bespoke intelligence layer for the specific institution — its programs, its pedagogy, its data ecosystem, and the decisions its people actually need to make.",
+      "Artifact can begin as a bespoke intelligence layer across the systems a university already runs — its LMS, student information, advising and assessment — shaped around its programs, its pedagogy, and the decisions its people actually need to make. For universities ready to go further, it can grow into the environment those systems have only ever been fragments of.",
     ],
     audiences: [
       { label: "Presidents", note: "Institutional direction and evidence" },
       { label: "Provosts", note: "Academic quality and program performance" },
+      {
+        label: "CIOs & technology leaders",
+        note: "Architecture, consolidation, and a path beyond legacy systems",
+      },
       { label: "Deans", note: "School-level patterns and curriculum design" },
       { label: "Faculty", note: "Concept-level insight into their own rooms" },
       { label: "Student success", note: "Earlier, more specific signal" },
@@ -48,6 +60,11 @@ export const solutions: Solution[] = [
       { label: "Students", note: "Intelligence about their own learning" },
     ],
     problems: [
+      {
+        title: "Fragmented systems",
+        featured: true,
+        body: "Students and faculty move between an LMS, a student information system, a portal, advising tools, email and a growing list of AI products — none of which knows what the others know. Each was adopted to solve one problem; together they have become one. Artifact connects them first, and can consolidate them over time.",
+      },
       {
         title: "Retention",
         body: "Most retention signals arrive after the conditions that produced them have been in place for weeks. Artifact surfaces earlier signal and describes the conditions surrounding both persistence and risk.",
@@ -134,6 +151,16 @@ export const solutions: Solution[] = [
       { label: "Approach", value: "Bespoke, not templated" },
       { label: "Status", value: "Research and development" },
     ],
+    vision: {
+      title: "Your LMS manages courses. Artifact is built to understand learning.",
+      deck: "Universities organized digital learning around the LMS, and everything since has accumulated around it — student information, advising, student success, analytics, communications, assessment, CRM, dashboards, faculty tools, and now AI, added as one more layer on top. Artifact isn't proposing another application for that stack. It asks whether the stack should eventually become one intelligent environment.",
+      closing:
+        "Traditional systems organize institutional activity. Artifact connects activity to intelligence — and intelligence to action.",
+    },
+    progression: {
+      title: "From connected systems to one intelligent environment.",
+      deck: "A university can begin without changing its LMS. Each stage is useful on its own, and none commits the institution to the next. The LMS can remain part of the architecture for as long as it serves the university — and where the university decides it no longer does, it doesn't have to.",
+    },
   },
   {
     slug: "high-schools",

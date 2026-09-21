@@ -312,7 +312,7 @@ export const articles: Article[] = [
       {
         type: "list",
         items: [
-          "Not a replacement for the SIS, LMS, or data warehouse. It reads from them.",
+          "Not a mandatory replacement for the SIS, LMS, or data warehouse. It can work across them as they are — and absorb their roles only where an institution chooses.",
           "Not another interface for staff to check. Intelligence should arrive where decisions are already being made.",
           "Not a governance shortcut. It raises the stakes on access, consent, and purpose limitation, and should be designed accordingly.",
         ],
