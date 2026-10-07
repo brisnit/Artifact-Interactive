@@ -36,6 +36,11 @@ export const navigation: NavItem[] = [
         href: "/private-ai",
         description: "Bring AI to the knowledge, on infrastructure you control.",
       },
+      {
+        label: "Security & Trust",
+        href: "/security",
+        description: "Hosting, data boundaries, and how we handle assurance.",
+      },
     ],
   },
   {
@@ -99,6 +104,7 @@ export const footerNav = {
     { label: "Platform", href: "/platform" },
     { label: "How It Works", href: "/how-it-works" },
     { label: "Private AI", href: "/private-ai" },
+    { label: "Security & Trust", href: "/security" },
     { label: "Research", href: "/research" },
     { label: "Partnerships", href: "/partnerships" },
   ],

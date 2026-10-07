@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/platform",
     "/private-ai",
+    "/security",
     "/how-it-works",
     "/solutions",
     "/research",
